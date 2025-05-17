@@ -11,6 +11,9 @@
 
 using namespace std;
 
+// TestableController 전방 선언
+class TestableController;
+
 class Controller {
 private:
     Location location;
@@ -33,6 +36,8 @@ public:
 
     //추가
     void runServer();
-
+    
+    // TestableController가 Controller의 private 멤버에 접근할 수 있도록 설정
+    friend class TestableController;
 };
 #endif

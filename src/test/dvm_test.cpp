@@ -56,7 +56,7 @@ protected:
         // MockOtherDVM 인스턴스 생성 및 설정
         mock_other_dvm_inst = make_unique<MockOtherDVM>(2, Location(10, 10));
 
-        dvm1 = new DVM(1, Location(0,0), other_dvm_list_empty, items1, stocks1, {});
+        dvm1 = new DVM(1, Location(0,0), stocks1, items1, {}, other_dvm_list_empty);
 
         // 다른 DVM 역할을 할 DVM 인스턴스 (예: 선결제 요청 대상)
         list<Item> items_for_other = {item_pepsi};
